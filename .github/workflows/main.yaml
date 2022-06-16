@@ -31,7 +31,7 @@ jobs:
       - name: deploy
         run: |-
           export ENV=prod
-          kubectl apply -f k8s-prod.yaml
+          kubectl apply -f deployment.yaml
   cleanup:
     runs-on: [self-hosted]
     needs: [build, deploy]
